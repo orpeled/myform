@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- Number Input Form -->
+  <form role="form" ng-submit="toValidate()">
+    <div class="row">
+        <h3>A Number in Plain Words</h3>
+      <div class="input-group">
+        <input type="number" ng-model="validator" min="0" max="1000000000" 
+               placeholder="Please enter a number" class="form-control" required>
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </span>
+      </div>
+    </div>
+    </form>
+    <!-- Modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Result</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <p class="form-group" ng-repeat="validator in validators">
+                        <span class="well-sm pull-left">{{validator}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
